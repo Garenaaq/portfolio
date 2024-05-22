@@ -1,0 +1,27 @@
+@import './base/reset';
+@import './base/fonts';
+@import './base/vars';
+@import './blocks/nav';
+@import './page-projects/header';
+@import './page-projects/projects';
+@import './blocks/footer';
+@import './page-project/project';
+@import './page-skills-contacts/skills-contacts';
+
+// * {
+//     outline: 4px solid green !important;
+// }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: normal;
+}
+
+.container {
+    // width: 1400px;
+    max-width: 1400px;
+    padding: 0px 84px;
+    margin: 0 auto;
+}
