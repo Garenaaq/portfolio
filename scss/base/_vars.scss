@@ -5,6 +5,9 @@ $text-btn-color: #5C62EC;
 $white-color: #FFF;
 
 %text-style-h2 {
+    @media (max-width: 620px) {
+        font-size: 45px;
+    }
     font-weight: 700;
     font-size: 60px;
     line-height: 78px;
@@ -18,6 +21,9 @@ $white-color: #FFF;
 }
 
 %text-style-h3 {
+    @media (max-width: 620px) {
+        font-size: 30px;
+    }
     font-size: 40px;
     font-weight: 700;
     line-height: 52px;

@@ -92,6 +92,11 @@ legend {
   line-height: 78px;
   color: #5C62EC;
 }
+@media (max-width: 620px) {
+  .container-skills-contacts h2, .container-project h2, .main-projects h2 {
+    font-size: 45px;
+  }
+}
 
 .container-project p, .main-projects ul li h3 {
   font-size: 24px;
@@ -103,6 +108,11 @@ legend {
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
+}
+@media (max-width: 620px) {
+  .container-skills-contacts div h3 {
+    font-size: 30px;
+  }
 }
 
 .container-skills-contacts div p {
@@ -117,6 +127,8 @@ nav {
   border-bottom: 1px solid #26292D;
 }
 nav .nav-row {
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -179,17 +191,32 @@ header .header-info h1 {
   font-size: 60px;
   margin-bottom: 20px;
 }
+@media (max-width: 620px) {
+  header .header-info h1 {
+    font-size: 43px;
+  }
+}
 header .header-info h1 .header-info__color-text {
   color: #5C62EC;
 }
 header .header-info h1 strong {
   font-size: 40px;
 }
+@media (max-width: 620px) {
+  header .header-info h1 strong {
+    font-size: 30px;
+  }
+}
 header .header-info p {
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
   margin-bottom: 52px;
+}
+@media (max-width: 620px) {
+  header .header-info p {
+    font-size: 15px;
+  }
 }
 header .header-info a {
   padding: 12px 28px;
@@ -212,6 +239,11 @@ header .header-info a:hover {
 .main-projects h2 {
   margin-bottom: 60px;
 }
+@media (max-width: 620px) {
+  .main-projects h2 {
+    margin-bottom: 30px;
+  }
+}
 .main-projects ul {
   display: flex;
   flex-wrap: wrap;
@@ -221,13 +253,18 @@ header .header-info a:hover {
   row-gap: 30px;
 }
 .main-projects ul li {
-  min-width: 370px;
+  min-width: 320px;
   background-color: #FFF;
   box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   min-height: 349px;
   transition: 0.2s ease-in;
   cursor: pointer;
+}
+@media (max-width: 620px) {
+  .main-projects ul li {
+    min-height: 310px;
+  }
 }
 .main-projects ul li img {
   margin-bottom: 15px;
@@ -236,7 +273,7 @@ header .header-info a:hover {
 }
 .main-projects ul li h3 {
   padding-bottom: 25px;
-  width: 370px;
+  min-width: 320px;
   color: black;
   overflow: hidden;
 }
@@ -259,6 +296,11 @@ footer ul {
   -moz-column-gap: 30px;
        column-gap: 30px;
   margin-bottom: 27px;
+}
+@media (max-width: 620px) {
+  footer ul img {
+    width: 33px;
+  }
 }
 footer p {
   color: #FFF;
@@ -330,6 +372,5 @@ body {
 
 .container {
   max-width: 1400px;
-  padding: 0px 84px;
   margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */

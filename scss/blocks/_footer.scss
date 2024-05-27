@@ -12,6 +12,12 @@ footer {
         justify-content: center;
         column-gap: 30px;
         margin-bottom: 27px;
+
+        img {
+            @media (max-width: 620px) {
+                width: 33px;
+            }
+        }
     }
 
     p {

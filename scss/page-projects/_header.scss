@@ -21,6 +21,10 @@ header {
         color: $white-color;
 
         h1 {
+            @media (max-width: 620px) {
+                font-size: 43px;
+            }
+
             font-weight: 700;
             line-height: 56px;
             font-size: 60px;
@@ -30,11 +34,17 @@ header {
             }
 
             strong {
+                @media (max-width: 620px) {
+                    font-size: 30px;
+                }
                 font-size: 40px;
             }
         }
 
         p {
+            @media (max-width: 620px) {
+                font-size: 15px;
+            }
             font-size: 18px;
             line-height: 24px;
             font-weight: 500;
