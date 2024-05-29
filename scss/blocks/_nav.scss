@@ -3,7 +3,7 @@ nav {
   padding: 20px 0;
   border-bottom: 1px solid #26292D;
 
-  .nav-row {
+    .nav-row {
         padding-left: 10px;
         padding-right: 10px;
         display: flex;
@@ -12,7 +12,63 @@ nav {
         flex-wrap: wrap;
     }
 
-    .navbar-logo {
+    .nav-row__burger {
+
+        @media (max-width: 900px) {
+            display: flex;
+        }
+
+        position: relative;
+        display: none;
+        z-index: 50;
+        width: 35px;
+        height: 18px;
+        margin-left: 10px;
+        justify-content: end;
+        align-items: center;
+
+        span {
+            transform: scale(1);
+            background-color: $white-color;
+            width: 80%;
+            height: 2px;
+        }
+
+        &_active {
+            span {
+                transform: scale(0);
+            }
+
+            &::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(-35%, -50%);
+            }
+
+            &::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(-33%, 80%);
+            }
+        }
+
+        &::before, &::after {
+            content: '';
+            height: 2px;
+            position: absolute;
+            width: 100%;
+            background-color: $white-color;
+            transition: all 0.3s ease 0s;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+
+    .nav-row__logo {
         font-family: "Poppins", sans-serif;
         font-weight: 700;
         font-style: normal;
@@ -24,12 +80,32 @@ nav {
         }
     }
 
-    .nav-list {
+    .nav-row__list {
+        @media (max-width: 900px) {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            z-index: 50;
+            background-color: $black-color;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            row-gap: 3px;
+            overflow-y: auto;
+        }
+
         display: flex;
         align-items: center;
         column-gap: 40px;
     
         a {
+            @media (max-width: 900px) {
+                font-size: 24px;
+            }
             color: $white-color;
             font-size: 16px;
             font-family: "Poppins", sans-serif;
@@ -37,7 +113,7 @@ nav {
             font-style: normal;
         }
 
-        &__link--active::after {
+        &_link--active::after {
             content: "";
             display: block;
             width: 100%;

@@ -134,30 +134,99 @@ nav .nav-row {
   align-items: center;
   flex-wrap: wrap;
 }
-nav .navbar-logo {
+nav .nav-row__burger {
+  position: relative;
+  display: none;
+  z-index: 50;
+  width: 35px;
+  height: 18px;
+  margin-left: 10px;
+  justify-content: end;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  nav .nav-row__burger {
+    display: flex;
+  }
+}
+nav .nav-row__burger span {
+  transform: scale(1);
+  background-color: #FFF;
+  width: 80%;
+  height: 2px;
+}
+nav .nav-row__burger_active span {
+  transform: scale(0);
+}
+nav .nav-row__burger_active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(-35%, -50%);
+}
+nav .nav-row__burger_active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(-33%, 80%);
+}
+nav .nav-row__burger::before, nav .nav-row__burger::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  background-color: #FFF;
+  transition: all 0.3s ease 0s;
+}
+nav .nav-row__burger::before {
+  top: 0;
+}
+nav .nav-row__burger::after {
+  bottom: 0;
+}
+nav .nav-row__logo {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 24px;
   color: #FFF;
 }
-nav .navbar-logo span {
+nav .nav-row__logo span {
   font-weight: 400;
 }
-nav .nav-list {
+nav .nav-row__list {
   display: flex;
   align-items: center;
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
-nav .nav-list a {
+@media (max-width: 900px) {
+  nav .nav-row__list {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    background-color: #171718;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    row-gap: 3px;
+    overflow-y: auto;
+  }
+}
+nav .nav-row__list a {
   color: #FFF;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-nav .nav-list__link--active::after {
+@media (max-width: 900px) {
+  nav .nav-row__list a {
+    font-size: 24px;
+  }
+}
+nav .nav-row__list_link--active::after {
   content: "";
   display: block;
   width: 100%;
@@ -196,9 +265,6 @@ header .header-info h1 {
     font-size: 43px;
   }
 }
-header .header-info h1 .header-info__color-text {
-  color: #5C62EC;
-}
 header .header-info h1 strong {
   font-size: 40px;
 }
@@ -230,6 +296,9 @@ header .header-info a {
 }
 header .header-info a:hover {
   opacity: 0.8;
+}
+header .header-info_color-text {
+  color: #5C62EC;
 }
 
 .main-projects {

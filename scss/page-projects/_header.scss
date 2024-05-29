@@ -29,9 +29,6 @@ header {
             line-height: 56px;
             font-size: 60px;
             margin-bottom: 20px;
-            .header-info__color-text {
-                color: $text-btn-color;
-            }
 
             strong {
                 @media (max-width: 620px) {
@@ -66,5 +63,9 @@ header {
                 opacity: 0.8;
             }
         }
+    }
+
+    .header-info_color-text {
+        color: $text-btn-color;
     }
 }
